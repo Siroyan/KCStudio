@@ -1,4 +1,4 @@
 package controllers;
 
-public class Member {
+public class Meats {
 }
