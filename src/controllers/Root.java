@@ -9,12 +9,12 @@ public class Root {
     }
 
     /* 肉トップページへ移動 */
-    public void goMeatTop(ActionEvent e){
-
+    public void goMeatTop(ActionEvent e) throws Exception {
+        main.Main.changeScene("../views/meat.fxml");
     }
 
     /* 組み合わせトップページへ移動 */
-    public void goCombinationTop(ActionEvent e){
-
+    public void goCombinationTop(ActionEvent e) throws Exception {
+        main.Main.changeScene("../views/combination.fxml");
     }
 }
