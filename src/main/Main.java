@@ -18,6 +18,7 @@ public class Main extends Application {
         Main.primaryStage.show();
     }
 
+    /* stage上のsceneを差し替えてページ遷移 */
     public static void changeScene(String fxml) throws Exception{
         Parent root = FXMLLoader.load(Main.class.getResource(fxml));
         primaryStage.setScene(new Scene(root, 600, 400));
