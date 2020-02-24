@@ -7,9 +7,9 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Members">
     <children>
-        <Button alignment="CENTER" layoutX="30.0" layoutY="75.0" mnemonicParsing="false" onAction="#registMember" prefHeight="50.0" prefWidth="100.0" text="会員登録" textAlignment="CENTER" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0" />
-        <Button alignment="CENTER" layoutX="30.0" layoutY="246.0" mnemonicParsing="false" onAction="#editMember" prefHeight="50.0" prefWidth="100.0" text="会員編集" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="110.0" />
-        <Button alignment="CENTER" layoutX="30.0" layoutY="336.0" mnemonicParsing="false" onAction="#deleteMember" prefHeight="50.0" prefWidth="100.0" text="会員削除" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="190.0" />
+        <Button alignment="CENTER" layoutX="30.0" layoutY="75.0" mnemonicParsing="false" onAction="#goRegistMemberView" prefHeight="50.0" prefWidth="100.0" text="会員登録" textAlignment="CENTER" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0" />
+        <Button alignment="CENTER" layoutX="30.0" layoutY="246.0" mnemonicParsing="false" onAction="#goEditMemberView" prefHeight="50.0" prefWidth="100.0" text="会員編集" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="110.0" />
+        <Button alignment="CENTER" layoutX="30.0" layoutY="336.0" mnemonicParsing="false" onAction="#goDeleteMemberView" prefHeight="50.0" prefWidth="100.0" text="会員削除" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="190.0" />
       <Button alignment="CENTER" layoutX="40.0" layoutY="346.0" mnemonicParsing="false" onAction="#returnToRoot" prefHeight="50.0" prefWidth="100.0" text="戻る" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" />
       <TextArea layoutX="314.0" layoutY="145.0" prefHeight="80.0" prefWidth="410.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="160.0" AnchorPane.rightAnchor="30.0" />
       <ListView layoutX="177.0" layoutY="47.0" prefHeight="230.0" prefWidth="410.0" AnchorPane.leftAnchor="160.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0" />

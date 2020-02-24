@@ -5,7 +5,7 @@ import javafx.event.ActionEvent;
 public class Root {
     /* 会員トップページへ移動 */
     public void goMemberTop(ActionEvent e) throws Exception {
-        main.Main.changeScene("../views/member.fxml");
+        main.Main.changeScene("../views/memberIndex.fxml");
     }
 
     /* 肉トップページへ移動 */
