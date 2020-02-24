@@ -5,11 +5,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Root">
     <children>
-        <Button alignment="CENTER" layoutX="30.0" layoutY="75.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="会員情報" textAlignment="CENTER" AnchorPane.bottomAnchor="190.0" AnchorPane.leftAnchor="30.0" />
-        <Button alignment="CENTER" layoutX="30.0" layoutY="246.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="肉" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="30.0" />
-        <Button alignment="CENTER" layoutX="30.0" layoutY="336.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="組み合わせ" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" />
+        <Button alignment="CENTER" layoutX="30.0" layoutY="75.0" mnemonicParsing="false" onAction="#goMemberTop" prefHeight="50.0" prefWidth="150.0" text="会員情報" textAlignment="CENTER" AnchorPane.bottomAnchor="190.0" AnchorPane.leftAnchor="30.0" />
+        <Button alignment="CENTER" layoutX="30.0" layoutY="246.0" mnemonicParsing="false" onAction="#goMeatTop" prefHeight="50.0" prefWidth="150.0" text="肉" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="30.0" />
+        <Button alignment="CENTER" layoutX="30.0" layoutY="336.0" mnemonicParsing="false" onAction="#goCombinationTop" prefHeight="50.0" prefWidth="150.0" text="組み合わせ" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" />
       <Label layoutX="202.0" layoutY="176.0" text="会員さんの情報を登録,編集,削除できます" AnchorPane.leftAnchor="210.0">
          <font>
             <Font size="14.0" />
