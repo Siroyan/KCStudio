@@ -5,46 +5,29 @@ import java.sql.*;
 public class Member {
     static String dbname = "sample.db";
     static Connection conn = null;
-    static Statement stmt = null;
+    static PreparedStatement pstmt = null;
 
-    public static void regist(){
-        connectDB();
+    public static void regist(String memberName){
         /* データの挿入 */
-        try {
-            stmt.executeUpdate("INSERT INTO products VALUES(1, 'AAA', 100)");
-            stmt.executeUpdate("INSERT INTO products VALUES(2, 'BBB', 80)");
-            stmt.executeUpdate("INSERT INTO products VALUES(3, 'CCC', 220)");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        disconnectDB();
-    }
-
-    /* DBと接続 */
-    private static void connectDB(){
         try {
             Class.forName("org.sqlite.JDBC");
             conn = DriverManager.getConnection("jdbc:sqlite:" + dbname);
-            System.out.println("接続成功");
 
-            stmt = conn.createStatement();
-            stmt.executeUpdate("CREATE TABLE IF NOT EXISTS products (pid INTEGER, name VARCHAR(20), price INTEGER)");
-            System.out.println("テーブル作成");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+            pstmt = conn.prepareStatement("CREATE TABLE IF NOT EXISTS member (name text)");
+            pstmt.executeUpdate();
 
-    /* DBと切断 */
-    private static void disconnectDB(){
-        try {
-            if (stmt != null) {
-                stmt.close();
+            pstmt = conn.prepareStatement("INSERT INTO member VALUES(?)");
+            pstmt.setString(1, memberName);
+
+            pstmt.executeUpdate();
+
+            if (pstmt != null) {
+                pstmt.close();
             }
             if (conn != null) {
                 conn.close();
             }
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
