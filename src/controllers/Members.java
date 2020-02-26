@@ -1,10 +1,29 @@
 package controllers;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
-public class Members {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class Members implements Initializable {
+
+    @FXML
+    private ListView<String> memberList = new ListView<>();
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        String[] s = new String[]{"abc", "bcd", "cde"};
+        ObservableList<String> lm = FXCollections.observableArrayList(s);
+        memberList.setItems(lm);
+    }
+
     /* Index View */
     /* 会員登録ページへ */
     @FXML
@@ -26,7 +45,7 @@ public class Members {
 
     /* New View */
     @FXML
-    public TextField nameField;
+    private TextField nameField;
     /* 会員を登録 */
     @FXML
     private void registMember(ActionEvent e) throws Exception {
@@ -34,7 +53,7 @@ public class Members {
         main.Main.changeScene("../views/memberIndex.fxml");
     }
 
-    /* rootへ移動 */
+    /* MemberIndexへ移動 */
     @FXML
     private void returnToMemberIndex(ActionEvent e) throws Exception {
         main.Main.changeScene("../views/memberIndex.fxml");
