@@ -15,13 +15,12 @@ public class Members implements Initializable {
 
     @FXML
     private ListView<String> memberList = new ListView<>();
+    private ObservableList<String> memberListRecords = FXCollections.observableArrayList();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
-        String[] s = new String[]{"abc", "bcd", "cde"};
-        ObservableList<String> lm = FXCollections.observableArrayList(s);
-        memberList.setItems(lm);
+        memberListRecords.addAll(models.Member.fetch());
+        memberList.setItems(memberListRecords);
     }
 
     /* Index View */

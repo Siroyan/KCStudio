@@ -34,8 +34,9 @@ public class Member {
         }
     }
 
-    public static ArrayList<String> get(String memberName){
-        /* データの挿入 */
+    public static ArrayList<String> fetch(){
+        ArrayList<String> members = new ArrayList<String>();
+        /* 会員データを取得 */
         try {
             Class.forName("org.sqlite.JDBC");
             conn = DriverManager.getConnection("jdbc:sqlite:" + dbname);
@@ -47,6 +48,11 @@ public class Member {
 
             ResultSet rs = pstmt.executeQuery();
 
+            while(rs.next()){
+                String name = rs.getString("name");
+                members.add(name);
+            }
+
             if (pstmt != null) {
                 pstmt.close();
             }
@@ -56,5 +62,6 @@ public class Member {
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
+        return members;
     }
 }
